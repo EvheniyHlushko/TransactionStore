@@ -1,0 +1,10 @@
+.vs/
+*/obj/
+*/bin/
+bin/
+obj/
+*.user
+*/*.user
+**.idea
+**.ncrunch*
+**.orig
