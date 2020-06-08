@@ -6,7 +6,6 @@ namespace TransactionStore.Api
 {
     public class OpenApiSchemaNSWagExampleGenerator : OpenApiSchemaGenerator
     {
-        /// <inheritdoc />
         public OpenApiSchemaNSWagExampleGenerator(JsonSchemaGeneratorSettings settings)
             : base(settings)
         {

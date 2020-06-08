@@ -39,7 +39,7 @@ namespace TransactionStore.Api.DomainEvents.PipelineBehaviors
                 {
                     new ValidationFailure
                     {
-                        ErrorMessage = $"File exceeds the maximum file-size {_fileRestrictionsSettings.MaxSizeMb} MB",
+                        ErrorMessage = $"File exceeds the maximum file size {_fileRestrictionsSettings.MaxSizeMb} MB",
                         PropertyName = "File"
                     }
                 });

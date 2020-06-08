@@ -14,7 +14,7 @@ namespace TransactionStore.Api.Extensions
             foreach (var error in errors)
             {
                 errorMessageBuilder.AppendLine(error.ErrorMessage);
-                if (string.IsNullOrEmpty(error.RawRecord)) errorMessageBuilder.AppendLine($"Raw data: {error.RawRecord}");
+                if (!string.IsNullOrEmpty(error.RawRecord)) errorMessageBuilder.AppendLine($"Raw data: {error.RawRecord}");
             }
 
             logger.LogError(errorMessageBuilder.ToString());
