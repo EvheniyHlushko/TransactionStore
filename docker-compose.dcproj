@@ -6,7 +6,7 @@
     <ProjectGuid>43e6f3b8-c71c-4876-95ab-4ac61da0e6e9</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>alphafx.tradesettlement.api</DockerServiceName>
+    <DockerServiceName>transactionstore.api</DockerServiceName>
     <Configurations>Debug;Release</Configurations>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>

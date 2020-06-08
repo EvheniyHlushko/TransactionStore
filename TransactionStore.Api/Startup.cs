@@ -20,7 +20,7 @@ namespace TransactionStore.Api
 {
     public class Startup
     {
-        private const string AppTitle = "AlphaFX Trade Settlement API";
+        private const string AppTitle = "Transaction store API";
         private static readonly Assembly StartupAssembly = typeof(Startup).Assembly;
         private readonly IConfiguration _configuration;
 
@@ -101,3 +101,4 @@ namespace TransactionStore.Api
             });
         }
     }
+}
