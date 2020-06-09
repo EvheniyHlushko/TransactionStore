@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
@@ -24,7 +22,6 @@ namespace TransactionStore.Api.Parsers
 
         public async Task<ParserResult<T>> ParseAsync(IFormFile file, CancellationToken token)
         {
-
             try
             {
                 var elements = await GetXElements(file, token);
@@ -49,25 +46,22 @@ namespace TransactionStore.Api.Parsers
             }
         }
 
+        public bool CanParse(string extension)
+        {
+            return extension.Equals(".xml");
+        }
+
         private static async Task<IEnumerable<XElement>> GetXElements(IFormFile file, CancellationToken token)
         {
             await using var stream = file.OpenReadStream();
-            
+
             var document = await XDocument.LoadAsync(stream, LoadOptions.SetLineInfo, token);
 
             var elements = document.Root?.Elements();
 
-            if (elements == null)
-            {
-                throw CantParseValidationException(file.FileName);
-            }
+            if (elements == null) throw CantParseValidationException(file.FileName);
 
             return elements;
-        }
-
-        public bool CanParse(string extension)
-        {
-            return extension.Equals(".xml");
         }
 
         private static ValidationException CantParseValidationException(string fileName)

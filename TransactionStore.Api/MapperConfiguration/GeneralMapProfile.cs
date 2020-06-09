@@ -1,4 +1,4 @@
-﻿﻿using AutoMapper;
+﻿using AutoMapper;
 using TransactionStore.Api.Models.OData;
 using TransactionStore.Api.Models.Transaction;
 using TransactionStore.Data.Entities;

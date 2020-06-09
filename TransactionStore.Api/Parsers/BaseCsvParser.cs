@@ -32,14 +32,12 @@ namespace TransactionStore.Api.Parsers
             {
                 if (context.InnerException is ValidationException validationException) errors.AddRange(validationException.Errors);
                 else
-                {
-                    errors.Add(new ValidationFailure()
+                    errors.Add(new ValidationFailure
                     {
                         ErrorMessage = $"Can't parse {file.FileName}. Line {context.ReadingContext.Row}",
                         PropertyName = "File",
                         RawRecord = context.ReadingContext.RawRecord
                     });
-                }
 
                 return false;
             };

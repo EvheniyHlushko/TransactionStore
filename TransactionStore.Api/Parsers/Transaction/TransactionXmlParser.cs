@@ -114,7 +114,7 @@ namespace TransactionStore.Api.Parsers.Transaction
 
             return isAnyNull;
         }
-        
+
         private static bool TryGetTransactionStatus(string value, out TransactionStatus status)
         {
             switch (value)

@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionStore.Api.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-compose", "docker-compose.dcproj", "{15348C05-F6D9-4141-BEE4-13B906E4704E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionStore.Client", "TransactionStore.Client\TransactionStore.Client.csproj", "{D835310C-E561-4F77-A516-6EC26207C778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{15348C05-F6D9-4141-BEE4-13B906E4704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15348C05-F6D9-4141-BEE4-13B906E4704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15348C05-F6D9-4141-BEE4-13B906E4704E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D835310C-E561-4F77-A516-6EC26207C778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D835310C-E561-4F77-A516-6EC26207C778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D835310C-E561-4F77-A516-6EC26207C778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D835310C-E561-4F77-A516-6EC26207C778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

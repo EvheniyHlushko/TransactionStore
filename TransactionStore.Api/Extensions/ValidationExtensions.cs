@@ -8,12 +8,12 @@ namespace TransactionStore.Api.Extensions
     {
         public static async Task HandleModelAsync<T>(
             this ISequencedValidationService<FileParsingValidationContext<T>> validationService,
-            T model, 
-            int lineNumber, 
-            string rawRecord, 
+            T model,
+            int lineNumber,
+            string rawRecord,
             List<ValidationFailure> errors,
             ICollection<T> models)
-        { 
+        {
             if (model == null) return;
 
             var validationResult = await validationService.Validate(

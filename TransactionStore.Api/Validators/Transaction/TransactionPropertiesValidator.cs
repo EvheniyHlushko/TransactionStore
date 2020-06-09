@@ -17,7 +17,8 @@ namespace TransactionStore.Api.Validators.Transaction
                 result.Errors.Add(new ValidationFailure
                 {
                     PropertyName = nameof(PaymentTransaction.TransactionId),
-                    ErrorMessage = $"{nameof(PaymentTransaction.TransactionId)} length should not be greater than 50 characters. Line {context.LineNumber}",
+                    ErrorMessage =
+                        $"{nameof(PaymentTransaction.TransactionId)} length should not be greater than 50 characters. Line {context.LineNumber}",
                     RawRecord = context.RawRecord
                 });
 

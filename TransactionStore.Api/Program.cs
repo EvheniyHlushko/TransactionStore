@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using TransactionStore.Data;
 
 namespace TransactionStore.Api
@@ -21,6 +22,7 @@ namespace TransactionStore.Api
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging(w => w.AddConsole())
                 .UseStartup<Startup>();
         }
 
